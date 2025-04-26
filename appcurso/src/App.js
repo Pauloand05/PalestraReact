@@ -2,10 +2,14 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [likes, setlikes] = useState(0);
+  const [likes, setLikes] = useState(0);
 
   const DaroLike = () => {
-    setlikes(likes + 1);
+    setLikes(likes + 1);
+  }
+
+  const DaroDisLike = () => {
+    setLikes(likes - 1);
   }
 
   return (
@@ -18,7 +22,7 @@ function App() {
           <input type='button' value="likes" onClick={DaroLike}></input>
         </div>
         <div className='col'>
-
+          <input type='button' value="dislikes" onClick={DaroDisLike}></input>
         </div>
       </div>
     </div>
